@@ -1,0 +1,144 @@
+body {
+    background: rgb(255, 255, 239);
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 5px 50px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        padding: 5px 10px;
+        font-size: 22px;
+        margin-left: 20px;
+        border-radius: 6px;
+        border-width: 0;
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+        cursor: pointer;
+    }
+
+    .success {
+        background: #13aa40;
+        color: #fff;
+      }
+      
+    .success:active {
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 211, 50, 0.3) 0 0 0 4px;
+    }
+
+
+    .primary {
+        background-color: #405cf5;
+        color: #fff;
+    }
+    .primary:active {
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+    }
+
+    .delete {
+        background-color: #f53535;
+        color: #fff;
+    }
+    .delete:active {
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(211, 50, 50, 0.3) 0 0 0 4px;
+    }
+
+    
+}
+
+#product_form {
+    width: 400px;
+    margin: 5vh auto 0 auto;
+    padding: 20px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 4px;
+    font-size: 14px;
+
+    .input-control {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-control input,select {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        font-size: 13px;
+        padding: 8px;
+        
+    }
+
+    .input-control input:focus, .input-control select:focus {
+        outline: 0;
+    }
+
+    .input-control.success input, .input-control.success select {
+        border-color: #09c372;
+    }
+
+    .input-control.error input, .input-control.error select {
+        border-color: #ff3860;
+    }
+
+    .input-control .error {
+        color: #ff3860;
+        font-size: 12px;
+        height: 15px;
+    }
+}
+
+
+
+
+
+  
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 30px 50px;
+
+    .delete-checkbox{
+        cursor: pointer;
+    }
+
+    .cards-inner {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(211, 211, 211);;
+        padding: 20px;
+        border-radius: 5px;
+        transition: box-shadow 0.4s;
+
+        &:hover {
+            box-shadow: 0 5px 20px rgba(1, 45, 128, 0.5);
+        }
+
+        p {
+            margin: auto;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+}
+  
+@media (min-width: 600px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+@media (min-width: 912px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+  
+@media (min-width: 1220px) {
+    .cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+}

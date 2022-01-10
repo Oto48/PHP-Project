@@ -1,0 +1,168 @@
+body {
+  background: #ffffef;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 50px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header button {
+  padding: 5px 10px;
+  font-size: 22px;
+  margin-left: 20px;
+  border-radius: 6px;
+  border-width: 0;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  cursor: pointer;
+}
+
+.header .success {
+  background: #13aa40;
+  color: #fff;
+}
+
+.header .success:active {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(50, 211, 50, 0.3) 0 0 0 4px;
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(50, 211, 50, 0.3) 0 0 0 4px;
+}
+
+.header .primary {
+  background-color: #405cf5;
+  color: #fff;
+}
+
+.header .primary:active {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(50, 151, 211, 0.3) 0 0 0 4px;
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(50, 151, 211, 0.3) 0 0 0 4px;
+}
+
+.header .delete {
+  background-color: #f53535;
+  color: #fff;
+}
+
+.header .delete:active {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(211, 50, 50, 0.3) 0 0 0 4px;
+          box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0, rgba(211, 50, 50, 0.3) 0 0 0 4px;
+}
+
+#product_form {
+  width: 400px;
+  margin: 5vh auto 0 auto;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#product_form .input-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#product_form .input-control input, #product_form select {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 13px;
+  padding: 8px;
+}
+
+#product_form .input-control input:focus, #product_form .input-control select:focus {
+  outline: 0;
+}
+
+#product_form .input-control.success input, #product_form .input-control.success select {
+  border-color: #09c372;
+}
+
+#product_form .input-control.error input, #product_form .input-control.error select {
+  border-color: #ff3860;
+}
+
+#product_form .input-control .error {
+  color: #ff3860;
+  font-size: 12px;
+  height: 15px;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 0 30px 50px;
+}
+
+.cards .delete-checkbox {
+  cursor: pointer;
+}
+
+.cards .cards-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+}
+
+.cards .cards-inner:hover {
+  -webkit-box-shadow: 0 5px 20px rgba(1, 45, 128, 0.5);
+          box-shadow: 0 5px 20px rgba(1, 45, 128, 0.5);
+}
+
+.cards .cards-inner p {
+  margin: auto;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 912px) {
+  .cards {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1220px) {
+  .cards {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */
